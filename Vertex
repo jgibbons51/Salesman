@@ -1,0 +1,27 @@
+public class Vertex {
+	
+	private String vertexName;
+	private double xCoordinate;
+	private double yCoordinate;
+	
+	public Vertex(String vertexName, double xCoordinate, double yCoordinate) {
+		this.vertexName = vertexName;
+		this.xCoordinate = xCoordinate;
+		this.yCoordinate = yCoordinate;
+	}
+	
+	//gets the vertex's label
+	public String getLabel() {
+		return vertexName;
+	}
+	
+	//returns the vertex's x-coordinate
+	public double getX() {
+		return xCoordinate;
+	}
+	
+	//returns the vertex's y-coordinate
+	public double getY() {
+		return yCoordinate;
+	}
+}
