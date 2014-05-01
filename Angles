@@ -1,0 +1,33 @@
+public class Angles
+{
+    private double lat1;
+    private double lon1;
+    
+    private double lat2;
+    private double lon2;
+    
+    private double R = 3963.1676;   
+    
+    public double calculate(double input1, double input2, double input3, double input4 )
+    {
+        lat1 = toRadians(input1);
+        lon1 = toRadians(input2);
+        
+        lat2 = toRadians(input3);
+        lon2 = toRadians(input4);
+        
+        double dlon = lon2 - lon1;
+        double dlat = lat2 - lat1;
+        
+        double a = Math.sin(dlat/2)*Math.sin(dlat/2) + Math.cos(lat1)*Math.cos(lat2)*Math.sin(dlon/2)*Math.sin(dlon/2);
+        double c = 2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+        double d = R*c;
+        
+        return(d);
+    }
+    
+    public double toRadians(double input)
+    {
+        return (double)input*Math.PI/180;
+    }
+}
