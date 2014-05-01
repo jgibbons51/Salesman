@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+
+public class Edge {
+	
+	private Vertex a;
+	private Vertex b;
+	private double distance;
+	
+	public Edge(Vertex a, Vertex b, double distance) {
+		this.a = a;
+		this.b = b;
+		this.distance = distance;
+	}
+	
+	public ArrayList<Vertex> getEndpoints() {
+		ArrayList<Vertex> verticesOfEdge = new ArrayList<Vertex>();
+		verticesOfEdge.add(a);
+		verticesOfEdge.add(b);
+		return verticesOfEdge;
+	}
+
+	//returns the weight of an edge
+	public double getDistance() {
+		return distance;
+	}
+}
